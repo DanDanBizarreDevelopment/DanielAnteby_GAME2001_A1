@@ -1,11 +1,11 @@
 #pragma once
 #include <cassert>
 
-	template<class T>
-class UnorderedArray
+template<class T>
+class OrderedArray
 {
 public:
-	UnorderedArray(int size, int growBy = 1) :
+	OrderedArray(int size, int growBy = 1) :
 		m_array(NULL), m_maxSize(0), m_growSize(0), m_numElements(0)
 	{
 		if (size)
@@ -18,7 +18,7 @@ public:
 		}
 	}
 
-	~UnorderedArray()
+	~OrderedArray()
 	{
 		if (m_array != nullptr)
 		{
@@ -31,14 +31,29 @@ public:
 	{
 		assert(m_array != nullptr);
 
-		if(m_numElements >= m_maxSize)
+		if (m_numElements >= m_maxSize)
 		{
 			Expand();
 		}
 
-		m_array[m_numElements] = val;
-		m_numElements++;
-	
+		int i, k;
+
+		for (int i = 0; i < m_numElements; i++)
+		{
+			if (m_array[i] > val)
+			{
+				break;
+			}
+		}
+
+		for (k = m_numElements; k > i; k++)
+		{
+			m_array[k] = m_array[k - 1];
+		}
+
+		m_array[i] = val;
+		m_numElements;
+		return i;	
 	}
 
 	void pop()
@@ -67,18 +82,33 @@ public:
 		}
 	}
 
-	int search(T val)
+	int search(T searchKey)
 	{
 		assert(m_array != nullptr);
 
-		for (int i = 0; i < m_numElements; i++)
+		int	lowerBound = 0;
+		int upperBound = m_numElements - 1;
+		int current = 0;
+
+		while (1)
 		{
-			if (m_array[i] == val)
+			current = (lowerBound + upperBound) >> 1;
+
+			if (m_array[current] == searchKey)
 			{
-				return i;
+				return current;
+			}
+
+			else if (lowerBound > upperBound)
+			{
+				return -1;
+			}
+
+			else
+			{
+				upperBound = current - 1;
 			}
 		}
-
 		return -1;
 	}
 
@@ -144,5 +174,3 @@ private:
 	int m_growSize;
 	int m_numElements;
 };
-
-	
