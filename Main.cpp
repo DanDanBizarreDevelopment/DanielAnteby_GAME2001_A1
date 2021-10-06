@@ -1,6 +1,4 @@
 #include <iostream>
-#include "UnorderedArray.h"
-#include "OrderedArray.h"
 #include "Array.h"
 
 using namespace std;
@@ -9,7 +7,11 @@ int main()
 {
 	Array<int> array(3);
 
-	array.push(3);
+	int choice;
+	cout << "Ordered(1) or Unordered?(2)" << endl;
+	cin >> choice;
+
+	array.UnorderedArray::push(3);
 	array.push(53);
 	array.push(83);
 	array.push(23);

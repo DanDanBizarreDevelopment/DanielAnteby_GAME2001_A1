@@ -1,4 +1,5 @@
 #pragma once
+#include <cassert>
 #include "OrderedArray.h"
 #include "UnorderedArray.h"
 
@@ -140,7 +141,7 @@ private:
 
 public:
 
-	class UnorderedArray
+	class UnorderedArray: Array
 	{
 
 		void push(T val)
@@ -173,7 +174,7 @@ public:
 		}
 	};
 
-	class OrderedArray
+	class OrderedArray: Array
 	{
 
 		void push(T val)

@@ -25,7 +25,7 @@ public:
 			delete[] m_array;
 			m_array = nullptr;
 		}
-	}*/
+	}
 
 	void push(T val)
 	{
@@ -93,4 +93,4 @@ private:
 	int m_maxSize;
 	int m_growSize;
 	int m_numElements;
-};
+};*/
