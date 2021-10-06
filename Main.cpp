@@ -7,13 +7,13 @@ using namespace std;
 
 int main()
 {
-	UnorderedArray<int> array(3);
+	Array<int> array(3);
 
 	array.push(3);
 	array.push(53);
 	array.push(83);
 	array.push(23);
-	array.push(83);
+	array.push(82);
 
 	array[2] = 112;
 
@@ -55,7 +55,7 @@ int main()
 	array.pop();
 	array.remove(2);
 
-	cout << "Unordered array contents: ";
+	cout << "Ordered array contents: ";
 
 	for (int i = 0; i < array.GetSize(); i++)
 	{

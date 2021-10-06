@@ -1,2 +1,10 @@
 ﻿  Main.cpp
-  DanielAnteby_GAME2001_A1.vcxproj -> C:\Users\Owner\source\repos\DanielAnteby_GAME2001_A1\Debug\DanielAnteby_GAME2001_A1.exe
+C:\Users\Owner\source\repos\DanielAnteby_GAME2001_A1\DanielAnteby_GAME2001_A1\OrderedArray.h(6,29): error C3861: 'Array': identifier not found
+C:\Users\Owner\source\repos\DanielAnteby_GAME2001_A1\DanielAnteby_GAME2001_A1\OrderedArray.h(97): message : see reference to class template instantiation 'OrderedArray<T>' being compiled
+C:\Users\Owner\source\repos\DanielAnteby_GAME2001_A1\DanielAnteby_GAME2001_A1\OrderedArray.h(37,4): error C3861: 'Expand': identifier not found
+C:\Users\Owner\source\repos\DanielAnteby_GAME2001_A1\DanielAnteby_GAME2001_A1\OrderedArray.h(37,10): message : 'Expand': function declaration must be available as none of the arguments depend on a template parameter
+C:\Users\Owner\source\repos\DanielAnteby_GAME2001_A1\DanielAnteby_GAME2001_A1\UnorderedArray.h(6,1): error C2955: 'Array': use of class template requires template argument list
+C:\Users\Owner\source\repos\DanielAnteby_GAME2001_A1\DanielAnteby_GAME2001_A1\Array.h(7): message : see declaration of 'Array'
+C:\Users\Owner\source\repos\DanielAnteby_GAME2001_A1\DanielAnteby_GAME2001_A1\UnorderedArray.h(67): message : see reference to class template instantiation 'UnorderedArray<T>' being compiled
+C:\Users\Owner\source\repos\DanielAnteby_GAME2001_A1\DanielAnteby_GAME2001_A1\UnorderedArray.h(37,4): error C3861: 'Expand': identifier not found
+C:\Users\Owner\source\repos\DanielAnteby_GAME2001_A1\DanielAnteby_GAME2001_A1\UnorderedArray.h(37,10): message : 'Expand': function declaration must be available as none of the arguments depend on a template parameter
